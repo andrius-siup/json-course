@@ -13,119 +13,16 @@
   <div id="output"></div>
 
   <script type="text/javascript">
-    // var people = {
-    //   "person1": {
-    //     "firstName": "John",
-    //     "lastName": "Smith",
-    //     "age": 25,
-    //     "checkedin": true
-    //   },
-    //   "person2": {
-    //     "firstName": "Andrius",
-    //     "lastName": "Siup",
-    //     "age": 36,
-    //     "checkedin": true
-    //   },
-    //   "person3": {
-    //     "firstName": "Jurate",
-    //     "lastName": "Siup",
-    //     "age": 31,
-    //     "checkedin": false
-    //   },
-    //   "person4": {
-    //     "Name": "Joe",
-    //     "Last Name": "Miller",
-    //     "Address": {
-    //       "Street": "Neverland 42",
-    //       "City": "Toronto",
-    //       "Postal": "AS65TY362"
-    //     },
-    //     "Hobbies": [
-    //       "doing stuff",
-    //       "dreaming",
-    //       "swimming"
-    //     ],
-    //     "Cars": [
-    //       {
-    //         "make": "Mustang",
-    //         "year": 2018,
-    //         "color": "red"
-    //       },
-    //       {
-    //         "make": "F150",
-    //         "year": 2020,
-    //         "color": "black"
-    //       },
-    //       {
-    //         "make": "Honda",
-    //         "year": 2015,
-    //         "color": "yellow"
-    //       }
-    //     ]
-    //   }
-    // };
+   
+   var data = '{"results":[{"gender":"male","name":{"title":"Monsieur","first":"Joshua","last":"Meunier"},"location":{"street":{"number":2117,"name":"Rue Bataille"},"city":"La Ferrière","state":"Genève","country":"Switzerland","postcode":8847,"coordinates":{"latitude":"-53.4880","longitude":"-28.2871"},"timezone":{"offset":"-2:00","description":"Mid-Atlantic"}},"email":"joshua.meunier@example.com","login":{"uuid":"8a63674f-0528-4eeb-85bd-b9b0dcecaa61","username":"sadsnake771","password":"emerald","salt":"dthH64TW","md5":"d1ce79b0026b733399bd1ddc10aa27a9","sha1":"635035e1daad828aaa917da84b39a7d9e77721ec","sha256":"965db19bb0b820633daa32a40e602748a5a5e9d3ab562137e168c5308bf326be"},"dob":{"date":"1977-02-28T22:47:47.542Z","age":44},"registered":{"date":"2014-09-06T18:43:50.358Z","age":7},"phone":"078 986 64 04","cell":"076 058 34 70","id":{"name":"AVS","value":"756.8986.8222.87"},"picture":{"large":"https://randomuser.me/api/portraits/men/2.jpg","medium":"https://randomuser.me/api/portraits/med/men/2.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/2.jpg"},"nat":"CH"}],"info":{"seed":"a2d63594c3515fa5","results":1,"page":1,"version":"1.3"}}';
 
-    // console.log(people);
-
-    // var person = {
-    //   "name": "Joe",
-    //   "lastName": "Miller",
-    //   "car1": "Mustang",
-    //   "car2": "F150",
-    //   "car5": "Fitness"
-    // }
-
-    // var str1 = "car";
-    // var cnt = 1;
-
-    // // car concatenate 1 = car1
-    // console.log(person[str1+cnt]);
-    // cnt++;
-    // // car2
-    // console.log(person[str1+cnt]);
-
-    var myObj = {
-      "friends": [{
-          "firstName": "Mike",
-          "lastName": "Jones"
-        },
-        {
-          "firstName": "Sarah",
-          "lastName": "Gomez"
-        },
-        {
-          "firstName": "Rasa",
-          "lastName": "Ryza"
-        },
-        {
-          "firstName": "Andrius",
-          "lastName": "Pilipukas"
-        }
-      ]
-    };
-
-    var users = myObj.friends;
-    var html = '';
-
-    users.splice(3,0, {"firstName": "New", "lastName":"Person"});
-    // removed fourth element
-    users.splice(3,1);
-
-    var output = document.getElementById("output")
-    for (x = 0; x < users.length; x++) {
-      html += (Number(x) + 1) + '.' + users[x].firstName + ' ' + users[x].lastName + '<br>';
-    };
-
-    // for(var x in users){
-    //   html += (Number(x)+1) + '.' + users[x].firstName + ' ' + users[x].lastName + '<br>';
-    // };
-
-    output.innerHTML = html;
-    myObj.friends.forEach(function(item) {
-      output.innerHTML += item.firstName + ' ' + item.lastName + '<br>';
-    });
-
-    
+   var dataJSON = JSON.parse(data);
+   console.log(dataJSON.results);
+   console.log(dataJSON.results[0].gender);
+   console.log(dataJSON.results[0].name.first);
+   console.log(dataJSON.results[0].name.last);
+   console.log(dataJSON.results[0].picture.thumbnail);
+   console.log(dataJSON.results[0].location.postcode);
   </script>
 </body>
 
