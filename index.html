@@ -26,6 +26,9 @@
     window.onload = function() {
       if (sessionStorage['person'] != null) {
         var data = JSON.parse(sessionStorage['person']);
+        var message = 'Welcome'+ ' ' + data.first + ' '+ data.last+' '+'to the site!!!';
+
+        document.getElementById('output').innerHTML = message;
         console.log(data);
       }
     }
