@@ -17,12 +17,15 @@
    var data = '{"results":[{"gender":"male","name":{"title":"Monsieur","first":"Joshua","last":"Meunier"},"location":{"street":{"number":2117,"name":"Rue Bataille"},"city":"La Ferrière","state":"Genève","country":"Switzerland","postcode":8847,"coordinates":{"latitude":"-53.4880","longitude":"-28.2871"},"timezone":{"offset":"-2:00","description":"Mid-Atlantic"}},"email":"joshua.meunier@example.com","login":{"uuid":"8a63674f-0528-4eeb-85bd-b9b0dcecaa61","username":"sadsnake771","password":"emerald","salt":"dthH64TW","md5":"d1ce79b0026b733399bd1ddc10aa27a9","sha1":"635035e1daad828aaa917da84b39a7d9e77721ec","sha256":"965db19bb0b820633daa32a40e602748a5a5e9d3ab562137e168c5308bf326be"},"dob":{"date":"1977-02-28T22:47:47.542Z","age":44},"registered":{"date":"2014-09-06T18:43:50.358Z","age":7},"phone":"078 986 64 04","cell":"076 058 34 70","id":{"name":"AVS","value":"756.8986.8222.87"},"picture":{"large":"https://randomuser.me/api/portraits/men/2.jpg","medium":"https://randomuser.me/api/portraits/med/men/2.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/2.jpg"},"nat":"CH"}],"info":{"seed":"a2d63594c3515fa5","results":1,"page":1,"version":"1.3"}}';
 
    var dataJSON = JSON.parse(data);
-   console.log(dataJSON.results);
-   console.log(dataJSON.results[0].gender);
-   console.log(dataJSON.results[0].name.first);
-   console.log(dataJSON.results[0].name.last);
-   console.log(dataJSON.results[0].picture.thumbnail);
-   console.log(dataJSON.results[0].location.postcode);
+   let person = dataJSON.results[0];
+
+   console.log(person.gender);
+   console.log(person.name.first);
+   console.log(person.name.last);
+   console.log('Name'+ '-' + person.name.first + ' ' + person.name.last);
+   console.log(person.picture.thumbnail);
+   console.log(person.location.postcode);
+   
   </script>
 </body>
 
