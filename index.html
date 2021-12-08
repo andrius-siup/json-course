@@ -66,24 +66,46 @@
 
     // console.log(people);
 
-    var person = {
-      "name": "Joe",
-      "lastName": "Miller",
-      "car1": "Mustang",
-      "car2": "F150",
-      "car5": "Fitness"
-    }
+    // var person = {
+    //   "name": "Joe",
+    //   "lastName": "Miller",
+    //   "car1": "Mustang",
+    //   "car2": "F150",
+    //   "car5": "Fitness"
+    // }
 
-    var str1 = "car";
-    var cnt = 1;
+    // var str1 = "car";
+    // var cnt = 1;
 
-    // car concatenate 1 = car1
-    console.log(person[str1+cnt]);
-    cnt++;
-    // car2
-    console.log(person[str1+cnt]);
-    
+    // // car concatenate 1 = car1
+    // console.log(person[str1+cnt]);
+    // cnt++;
+    // // car2
+    // console.log(person[str1+cnt]);
 
+    var myObj = {
+      "friends": [{
+        "firstName": "Mike",
+        "lastName": "Jones"
+      },
+      {
+        "firstName": "Sarah",
+        "lastName": "Gomez"
+      },
+      {
+        "firstName": "Rasa",
+        "lastName": "Ryza"
+      },
+      {
+        "firstName": "Andrius",
+        "lastName": "Pilipukas"
+      }]
+    };
+
+    var users = myObj.friends;
+    for(var x in users){
+      console.log(users[x].firstName + ' ' + users[x].lastName);
+    };
 
   </script>
 </body>
