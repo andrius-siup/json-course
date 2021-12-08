@@ -24,7 +24,10 @@
     var myForm = document.getElementById('myForm');
     myForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var data = formData(myForm);
+      var data = JSON.stringify(formData(myForm));
+      if(data) {
+        sessionStorage['person'] = data;
+      }
       console.log(data);
     });
 
