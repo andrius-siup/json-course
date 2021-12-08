@@ -22,6 +22,14 @@
 
   <script type="text/javascript">
     var myForm = document.getElementById('myForm');
+
+    window.onload = function() {
+      if (sessionStorage['person'] != null) {
+        var data = JSON.parse(sessionStorage['person']);
+        console.log(data);
+      }
+    }
+
     myForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var data = JSON.stringify(formData(myForm));
