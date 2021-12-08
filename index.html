@@ -25,8 +25,11 @@
    html += 'Gender' + ': ' + person.gender + '<br>';
    html += 'Postal code' + ': ' + person.location.postcode + '<br>';
    html += 'From' + ': ' + person.location.country;
-
    output.innerHTML = html; 
+
+   // convert Javascript obj to the JSON string
+   var strMe = JSON.stringify(dataJSON);
+   console.log(strMe);
 
   </script>
 </body>
