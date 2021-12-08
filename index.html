@@ -86,31 +86,35 @@
 
     var myObj = {
       "friends": [{
-        "firstName": "Mike",
-        "lastName": "Jones"
-      },
-      {
-        "firstName": "Sarah",
-        "lastName": "Gomez"
-      },
-      {
-        "firstName": "Rasa",
-        "lastName": "Ryza"
-      },
-      {
-        "firstName": "Andrius",
-        "lastName": "Pilipukas"
-      }]
+          "firstName": "Mike",
+          "lastName": "Jones"
+        },
+        {
+          "firstName": "Sarah",
+          "lastName": "Gomez"
+        },
+        {
+          "firstName": "Rasa",
+          "lastName": "Ryza"
+        },
+        {
+          "firstName": "Andrius",
+          "lastName": "Pilipukas"
+        }
+      ]
     };
 
     var users = myObj.friends;
     var html = '';
 
-    for(var x in users){
-      html += (Number(x)+1) + '.' + users[x].firstName + ' ' + users[x].lastName + '<br>';
+    for (x = 0; x < users.length; x++) {
+      html += (Number(x) + 1) + '.' + users[x].firstName + ' ' + users[x].lastName + '<br>';
     };
-    document.getElementById("output").innerHTML = html;
 
+    // for(var x in users){
+    //   html += (Number(x)+1) + '.' + users[x].firstName + ' ' + users[x].lastName + '<br>';
+    // };
+    document.getElementById("output").innerHTML = html;
   </script>
 </body>
 
