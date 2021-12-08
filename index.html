@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  Hello World
+  <h1>Lern JSON</h1>
+  <div id="output"></div>
 
   <script type="text/javascript">
     // var people = {
@@ -103,9 +104,12 @@
     };
 
     var users = myObj.friends;
+    var html = '';
+
     for(var x in users){
-      console.log(users[x].firstName + ' ' + users[x].lastName);
+      html += (Number(x)+1) + '.' + users[x].firstName + ' ' + users[x].lastName + '<br>';
     };
+    document.getElementById("output").innerHTML = html;
 
   </script>
 </body>
