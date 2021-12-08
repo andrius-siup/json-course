@@ -108,6 +108,8 @@
     var html = '';
 
     users.splice(3,0, {"firstName": "New", "lastName":"Person"});
+    // removed fourth element
+    users.splice(3,1);
 
     var output = document.getElementById("output")
     for (x = 0; x < users.length; x++) {
